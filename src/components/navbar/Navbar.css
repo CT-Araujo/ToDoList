@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.h1{
+    position: relative;
+    display: flex;
+    font-size: 2.7em;
+    margin-bottom: 1em;
+    padding-top: 0.3em;
+    margin-left: 1.5em;
+}
+
+.header{
+    background-color: black;
+    width: 100vw;
+    height: 2.5em;
+    display: none;
+    pointer-events: none;
+
+}
+.Hamburguer{
+    width: 2em;
+    margin-left: 0.5em;
+    padding-top: 0.3em;
+    cursor: pointer;
+}
+.container{
+    position: fixed;
+    width: 15em;
+    left: 0;
+    top: 0;
+}
+
+.nav{
+    
+    background-color: black;
+    width: 4em;
+    height: 100vh;
+    transition: 0.7s ease-out;
+    overflow: hidden;
+    box-shadow: 5px 0 2em 0 rgba(44, 44, 44, 0.2), 10px 0 1em 0 rgba(82, 81, 81, 0.1) inset;
+}
+
+.nav:hover{
+    width: 14em;
+}
+.list-item{
+    list-style: none;
+    justify-content: start;
+    align-items: start;
+    height: 3em;
+    margin-left: 10%;
+    margin-bottom: 4em;
+    display: block;
+
+}
+
+.list-item .titulo{
+    display: flex;
+    margin-left: 1em;
+    font-size: 1.3em;
+    line-height: 2.8em;
+    cursor: pointer;
+    transition: 0.19s;
+}
+
+.titulo:hover{
+    font-size: 1.39em;
+
+}
+
+.Icone{
+    width: 2em;
+    position: relative;
+    display: flex;
+    margin: 0.5em;
+    margin-right: 1.5em;
+    float: left;
+    background-color: none;
+    transition: 0.2s ease-out;
+}
+.More{
+    width: 0.9em;
+    position: relative;
+    margin-left: 10em;
+    top: -2em;
+    float: left;
+    padding: 0.3em;
+    cursor: pointer;
+}
+
+.clicado .Icone{
+    background-color:#242424;
+    border-radius: 10px;
+    padding: 0.4em;
+    margin-left: 0.2em;
+}
+
+@media (max-width: 650px) {
+
+    .nav{
+        width: 0;
+        pointer-events: none;
+        transition: 0.7s ease-out;
+    }
+    .container{
+        width: 0px;
+    }
+    .header{
+        display: block;
+        pointer-events: all;
+    }
+    .h1{
+        font-size: 2em;
+        margin-left: 1.8em;
+    }
+    .open {
+        width: 14em;
+        display: block;
+        transition: 0.7s ease-out;
+        pointer-events: all;
+        z-index: -1;
+
+    }
+    .list-item .titulo{
+        font-size: 1em;
+        line-height: 2.5em;
+    }
+    .Icone{
+        width: 1.6em;
+        margin: 0.3em;
+        margin-right: 1.2em;
+    }
+    .clicado .Icone{
+        padding: 0.1em;
+    }
+}
+

@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.containerTarefas{
+    width: 95%;
+    max-height: 2.5em;
+    border-bottom: 0.15em solid white;
+    margin-bottom: 1.8em;
+    margin-top: 2em;
+    overflow-y: hidden;
+    transition: 0.9s ease;
+
+}
+
+.containerTarefas.Read{
+    max-height: 30em;
+
+}
+
+.headerTarefas{
+    width: auto;
+    padding-inline: 1em;
+    margin-bottom: 0.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.tituloTask{
+    font-size: 1.39em;
+}
+
+.iconesTarefas{
+    width: 1.4em;
+    cursor: pointer;
+    pointer-events: all;
+    
+}
+
+.icones{
+    width: 1.4em;
+    cursor: pointer;
+    pointer-events: all;
+}
+.Descricao{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
+    padding: 1em;
+}
+
+.Icones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 1em;
+    margin-bottom: 0.9em;
+}
+
+.Icones .iconesTarefas{
+    padding: 0.4em;
+}
+
+.Svgtask{
+    background-color: black;
+    border: none;
+}
