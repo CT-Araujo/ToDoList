@@ -12,15 +12,20 @@ export default function Tarefas(){
         console.log('Clicou')
         setState(!isState)
     };
+    
+    const [isChecked, setChecked] = useState(false);
+    const Checked = () => {
+        setChecked(!isChecked)
+    } 
     return (
-        <div className={`containerTarefas ${isRead ? "" : "Read"}`}>
+        <div className={`containerTarefas ${isRead ? "" : "Read"} ${isChecked? "Completa" : ""}`}>
             <div className="headerTarefas">
                 <span className="tituloTask">Titulo</span>
                 <div className="Svgtask">
                     {isState ?  
                         (
                             <svg 
-                                className='icones' onClick={() => {ReadMore(); ChangeState();}}  viewBox="0 0 1024 1024" fill="#ffffff" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                className='ReadIcon' onClick={() => {ReadMore(); ChangeState();}}  viewBox="0 0 1024 1024" fill="#ffffff" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
                                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
                                 <g id="SVGRepo_iconCarrier">
@@ -29,7 +34,7 @@ export default function Tarefas(){
                             </svg> ) : 
                         (
                             <svg 
-                                className='icones'  onClick={() => {ReadMore(); ChangeState();}} viewBox="0 0 1024 1024" fill="#fff" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+                                className='ReadIcon'  onClick={() => {ReadMore(); ChangeState();}} viewBox="0 0 1024 1024" fill="#fff" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
                                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
                                 <g id="SVGRepo_iconCarrier">
@@ -62,16 +67,25 @@ export default function Tarefas(){
                         </svg>
                     </div>
 
-                    <svg 
-                        className='iconesTarefas' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div onClick={Checked}>
+                        {!isChecked? (
+                            <svg
+                                className='iconesTarefas'  id="Check"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
+                                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
+                                <g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/> </g>
+                            </svg> ) : (
+                            <svg className='iconesTarefas' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                        <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 
-                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
 
-                        <g id="SVGRepo_iconCarrier"> <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/> </g>
+                                <g id="SVGRepo_iconCarrier"> <path d="M6 6L18 18M18 6L6 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
 
-                    </svg>
+                            </svg>)
+                        }
+                    </div>
                 </div>
             </div>
         </div>

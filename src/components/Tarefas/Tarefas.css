@@ -11,6 +11,8 @@
     margin-top: 2em;
     overflow-y: hidden;
     transition: 0.9s ease;
+    padding: 0.3em;
+    border-radius: 1em;
 
 }
 
@@ -41,7 +43,7 @@
     
 }
 
-.icones{
+.ReadIcon{
     width: 1.4em;
     cursor: pointer;
     pointer-events: all;
@@ -62,10 +64,21 @@
 }
 
 .Icones .iconesTarefas{
-    padding: 0.4em;
+    padding: 0.5em;
+    cursor: pointer;
 }
 
 .Svgtask{
     background-color: black;
     border: none;
+}
+
+.Completa{
+    background-color: #262626;
+}
+.Completa .headerTarefas{
+    text-decoration: line-through;
+}
+.Completa .Svgtask{
+    background-color: #262626;
 }

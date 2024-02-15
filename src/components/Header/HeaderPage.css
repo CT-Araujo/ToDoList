@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.HeaderPage{
+ 
+    width: 85vw;
+    height: 3.5em;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    left:9%;
+    border-radius: 1.3em;
+    padding: 0.6em;
+
+}
+
+.Object{
+    width: 97.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: 1%;
+
+}
+.Page{
+    font-size: 2.5em;
+}
+
+.FilterContainer{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+}
+
+#FilterReadContainer{
+    position: relative;
+    right: 10%;
+    top: 60%;
+}
+.Filter_Read{
+    width: 1.2em;
+    position: relative;
+    cursor: pointer;
+    float: left;
+}
+
+.Filter{
+    width: 2em;
+    top: 0.3em;
+    position: relative;
+    cursor: pointer;
+}
+
+.MainFilter{
+    z-index: 3;
+    width: 0px;
+    height: 0px;
+    background-color: black;
+    position: fixed;
+    right: 5.7em;
+    top: 8em;
+    border-radius: 1em;
+    padding: 0em;
+    overflow: hidden;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+.MainFilter.Open{
+    width: 13em;
+    padding: 1em;
+    height: auto;
+    display: block;
+    pointer-events: all;
+    box-shadow: -0.4em 0.4em 1em #262626;
+}
+.MainFilter input{
+    margin-right: 1em;
+}
+
+.LabelFilter{
+    line-height: 2em;
+    
+}
+.DivFilter{
+    border-bottom: 0.1em solid white;
+    border-radius: 0.3em;
+    padding: 0.7em;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 650px){
+    .HeaderPage{
+       left: 7%;
+       margin-top: 1em;
+    }
+    .Filter{
+        width: 1.9em;
+    }
+    .Page{
+        font-size: 2.2em;
+        line-height: 1.5em;
+    }
+}
