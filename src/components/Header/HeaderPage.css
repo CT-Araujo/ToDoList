@@ -104,4 +104,28 @@
         font-size: 2.2em;
         line-height: 1.5em;
     }
+
+    .MainFilter.Open{
+        right: 1em;
+        top: 9.8em;
+    }
+}
+
+@media (min-height:771px), (max-height:900px){
+    .MainFilter.Open{
+        top: 10em;
+    }
+}
+
+@media (max-height: 770px), (min-height:671px){
+    .MainFilter.Open{
+        top: 8.5em;
+    }
+}
+
+
+@media (max-height: 670px){
+    .MainFilter.Open{
+        top: 8em;
+    }
 }

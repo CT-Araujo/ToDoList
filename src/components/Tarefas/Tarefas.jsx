@@ -4,19 +4,18 @@ import "./Tarefas.css";
 export default function Tarefas(){
     const [isRead, setRead] = useState(true);
     const ReadMore = () => {
-        setRead(!isRead)
+        setRead(!isRead);
     };
 
     const [isState, setState] = useState(true);
     const ChangeState = () => {
-        console.log('Clicou')
-        setState(!isState)
+        setState(!isState);
     };
     
     const [isChecked, setChecked] = useState(false);
     const Checked = () => {
-        setChecked(!isChecked)
-    } 
+        setChecked(!isChecked);
+    } ;
     return (
         <div className={`containerTarefas ${isRead ? "" : "Read"} ${isChecked? "Completa" : ""}`}>
             <div className="headerTarefas">
