@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: ToDoList
+    buildCommand: npm run build
+    startCommand: npm install --global serve && serve -s dist
